@@ -83,7 +83,7 @@ const maxMinAge = async (req, res) => {
 
     }
 }
-// שליפה שלישית
+//שליפה שלישית -הסתמכתי על הכתוב בשליפה חמש שאין שני משתמשים באותו שם 
 const updateAge = async (req, res) => {
     try {
         const persons = await Person.findOneAndUpdate({ "firstName": req.body.firstName }, {
