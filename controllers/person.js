@@ -51,7 +51,6 @@ const firstLetter = async (req, res) => {
     try {
         var char = 'd';
         let persons = await Person.find({ "firstName": { $regex: '^' + req.query.letter, $options: 'i' } })
-        // let persons = await Person.find().where('firstName'.charAt(0) == req.params.letter);
         if (persons == null) {
             res.send("no persons begin by this letter")
         }
